@@ -6,10 +6,11 @@ import {
   NavToggle,
   CloseNavButton,
 } from "./Frame.styles";
-import logo from "../../assets/logo.svg";
-import navJSON from "../../../../legacy/src/data/nav.json";
+import logo from "@/assets/svgs/logo.svg";
+import navJSON from "@/data/nav.json";
 import { NavJson } from "../../../types";
-import NavItem from "./NavItem";
+import NavigationItem from "./NavigationItem";
+import Image from "next/image";
 
 interface Props {
   children: React.ReactNode;
@@ -65,7 +66,7 @@ const Frame = ({ children }: Props) => {
           <NavToggleIcon />
         </NavToggle>
         <div className="logo">
-          <img src={logo} alt="logo" width="60" />
+          <Image src={logo} alt="logo" width="60" />
           <p>Bennetts Design System</p>
         </div>
         <></>
@@ -73,7 +74,7 @@ const Frame = ({ children }: Props) => {
       <NavAndContent>
         <Nav isVisible={navIsVisible}>
           <ul>
-            <NavItem
+            <NavigationItem
               nav={nav}
               level={0}
               handleLinkClick={() => setNavIsVisible(false)}
@@ -89,6 +90,7 @@ const Frame = ({ children }: Props) => {
             <CloseIcon />
           </CloseNavButton>
         </Nav>
+        {children}
       </NavAndContent>
     </>
   );

@@ -127,6 +127,57 @@ const GlobalStyle = createGlobalStyle`
     html {
         margin: 0;
         padding: 0;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1.55;
+        background: var(--surface);
+        color: var(--text);
+        font-size: 100%;
+        text-decoration: none;
+        box-sizing: border-box;
+        list-style-type: none;
+        -webkit-font-smoothing: anitaliased;
+        border: none;
+        appearance: none;
+        outline: none;
+
+        *:focus-visible {
+            box-shadow: var(--focus-outline);
+        }
+
+        code,
+        pre {
+            .keyword {
+            color: var(--code-keyword);
+            }
+            .function {
+            color: var(--code-function);
+            }
+            .string {
+            color: var(--code-string);
+            }
+            .boolean {
+            color: var(--code-boolean);
+            }
+            .number {
+            color: var(--code-number);
+            }
+            .operator {
+            color: var(--code-operator);
+            }
+            .punctuation {
+            color: var(--code-punctuation);
+            }
+            .property {
+            color: var(--code-property);
+            }
+            .selector {
+            color: var(--code-selector);
+            }
+            .comment {
+            color: var(--code-comment);
+            }
+        }
     }
 
     .heading {

@@ -8,8 +8,13 @@
       "children": {
         "button": {
           "title": "Button",
-          "slug": "/button",
+          "slug": "/components/button",
           "description": "Buttons are used primarily for actions"
+        },
+        "form": {
+          "title": "Form",
+          "slug": "/components/form",
+          "description": "Forms are use for users to fill out information"
         }
       }
     },

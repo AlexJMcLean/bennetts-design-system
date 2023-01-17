@@ -67,6 +67,7 @@ export const Nav = styled.nav<Props>`
   > ul {
     display: flex;
     flex-direction: column;
+    padding: 0;
 
     > li {
       .NavItem {

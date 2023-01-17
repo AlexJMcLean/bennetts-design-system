@@ -1,6 +1,17 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import GlobalStyle from "@/assets/styles/Global";
+import Frame from "@/components/Frame";
+import Providers from "@/contexts";
+import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Providers>
+        <GlobalStyle />
+        <Frame>
+          <Component {...pageProps} />;
+        </Frame>
+      </Providers>
+    </>
+  );
 }
