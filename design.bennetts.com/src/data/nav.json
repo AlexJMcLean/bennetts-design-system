@@ -1,0 +1,29 @@
+{
+  "children": {
+    "components": {
+      "slug": "/components",
+      "title": "Components",
+      "order": 2,
+      "newSection": true,
+      "children": {
+        "button": {
+          "title": "Button",
+          "slug": "/button",
+          "description": "Buttons are used primarily for actions"
+        }
+      }
+    },
+    "getting-started": {
+      "slug": "/getting-started",
+      "title": "Getting Started",
+      "description": "This is a design system for developing new applications within Bennetts. If you are just getting started in Bennetts or using BDS then here is a list of recommended resources and guidance to get you started",
+      "order": 1
+    },
+    "design": {
+      "slug": "/design",
+      "title": "Design",
+      "description": "These are the principles that how we shape and design all applications and experiences at Bennetts",
+      "order": 3
+    }
+  }
+}

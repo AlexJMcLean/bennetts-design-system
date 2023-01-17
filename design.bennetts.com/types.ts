@@ -7,7 +7,10 @@ export interface NavJson {
 export interface NavItem {
   title?: string;
   slug?: string;
+  description?: string;
   color?: string;
   hideChildren?: false;
   children?: NavJson;
+  order?: number;
+  newSection?: boolean;
 }

@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
 
     :root {
         --page-max-width: 1240px;
-        --headerHeight: 60px;
+        --header-height: 60px;
         --header-margin: 40px;
 
         @media screen and (max-width: ${mediaQueries.desktop}) {
