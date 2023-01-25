@@ -1,4 +1,4 @@
-import { slugify } from "@/utils/slugify";
+import { slugify } from "../../utils/slugify";
 import ReactMarkdown from "react-markdown";
 import Code from "../Code";
 

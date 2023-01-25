@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { NavItem } from ".@/types";
+import { NavItem } from "../../../types";
 import {
   NavItemElementStyles,
   NavItemSectionStyles,

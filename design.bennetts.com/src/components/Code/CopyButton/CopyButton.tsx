@@ -1,8 +1,8 @@
-import { ClipboardIcon } from "@/assets/icons/clipboard";
-import Icon from "@/components/Icon";
-import Tooltip from "@/components/Tooltip";
-import { useCopyToClipboard } from "@/utils/hooks";
-import { CopyButtonWrapperStyles, CopyButtonStyles } from "./CopyButton.styles";
+import { ClipboardIcon } from "../../../assets/icons/clipboard";
+import Icon from "../../../components/Icon";
+import Tooltip from "../../../components/Tooltip";
+import { useCopyToClipboard } from "../../../utils/hooks";
+import { CopyButtonStyles } from "./CopyButton.styles";
 
 function CopyButton({ code }: { code: string }) {
   const [copy, didJustCopy] = useCopyToClipboard(code);

@@ -1,5 +1,5 @@
 import siteJson from "../../.cache/site.json";
-import { SiteJSON } from "@/types";
+import { SiteJSON } from "..//types";
 
 const pages: SiteJSON = siteJson;
 

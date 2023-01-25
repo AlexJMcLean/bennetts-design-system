@@ -1,5 +1,3 @@
-import { Type } from "js-yaml";
-
 export interface NavJson {
   children?: {
     [key: string]: NavItem;

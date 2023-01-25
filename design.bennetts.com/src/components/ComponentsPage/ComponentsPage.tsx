@@ -1,6 +1,6 @@
 import siteJson from "../../../.cache/site.json";
-import { getComponentCategories } from "@/utils/commonUtilFunctions";
-import { SiteJSON } from "@/types";
+import { getComponentCategories } from "../../utils/commonUtilFunctions";
+import { SiteJSON } from "../../types";
 import Grid from "../Grid";
 import { CategoryStyles, ComponentsPageStyles } from "./ComponentsPage.styles";
 

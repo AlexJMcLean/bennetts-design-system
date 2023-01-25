@@ -7,9 +7,9 @@ import {
   CloseNavButton,
   PageContentStyles,
 } from "./Frame.styles";
-import logo from "@/assets/svgs/logo.svg";
+import logo from "../../assets/svgs/logo.svg";
 import navJSON from "../../../.cache/nav.json";
-import { NavJson } from "@/types";
+import { NavJson } from "../../types";
 import NavigationItem from "./NavigationItem";
 import Image from "next/image";
 import Link from "next/link";

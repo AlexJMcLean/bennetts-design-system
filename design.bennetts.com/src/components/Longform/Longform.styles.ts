@@ -1,4 +1,4 @@
-import { mediaQueries } from "@/assets/styles/stylesVariables";
+import { mediaQueries } from "../../assets/styles/stylesVariables";
 import styled, { css } from "styled-components";
 
 export const LongformStyles = styled.div`

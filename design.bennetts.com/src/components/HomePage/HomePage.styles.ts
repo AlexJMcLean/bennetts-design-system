@@ -1,4 +1,4 @@
-import { mediaQueries } from "@/assets/styles/stylesVariables";
+import { mediaQueries } from "../../assets/styles/stylesVariables";
 import styled from "styled-components";
 
 export const HomepageStyles = styled.div`

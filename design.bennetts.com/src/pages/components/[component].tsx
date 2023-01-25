@@ -1,13 +1,12 @@
 import ComponentExamples, {
   ComponentExample,
-} from "@/components/ComponentExamples/ComponentExamples";
-import { fstat } from "fs";
+} from "../../components/ComponentExamples/ComponentExamples";
 import { GetStaticProps } from "next";
 import path from "path";
 import fs from "fs";
-import { parseMarkdown } from "@/utils/markdown";
-import { AllTypes } from "@/types";
-import { toPascalCase } from "@/utils/commonUtilFunctions";
+import { parseMarkdown } from "../../utils/markdown";
+import { AllTypes } from "../../types";
+import { toPascalCase } from "../../utils/commonUtilFunctions";
 
 interface MarkdownData {
   frontMatter: any;
