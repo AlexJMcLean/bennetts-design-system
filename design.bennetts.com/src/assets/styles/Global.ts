@@ -180,41 +180,9 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
-    .heading {
-        color: var(--text-strong);
+    a {
+        text-decoration: none;
     }
-
-    .heading-1 {
-        color: var(--text-strong);
-        font-size: var(--font-size-1200);
-        font-weight: var(--font-weight-700);
-        letter-spacing: var(--letter-spacing-700);
-        line-height: 1.15;
-    }
-
-    .heading-2 {
-        color: var(--text-strong);
-        font-size: var(--font-size-800);
-        letter-spacing: var(--letter-spacing-400);
-        font-weight: var(--font-weight-700);
-        line-height: 1.25;
-    }
-
-    .heading-3 {
-        color: var(--text-strong);
-        font-size: var(--font-size-600);
-        font-weight: var(--font-weight-700);
-        letter-spacing: var(--letter-spacing-200);
-        line-height: 1.25;
-    }
-
-    .heading-4 {
-        color: var(--text-strong);
-        font-size: var(--font-size-400);
-        font-weight: var(--font-weight-600);
-        letter-spacing: var(--letter-spacing-200);
-    }
-
 `;
 
 export default GlobalStyle;

@@ -1,0 +1,9 @@
+{
+  "components/button": {
+    "frontMatter": {
+      "title": "Button",
+      "category": "Actions",
+      "description": "Buttons are used for primarily actions, such as 'add', 'Close', or 'Cancel'. Plain buttons are used for less important or less commonly used actions."
+    }
+  }
+}

@@ -1,8 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   reactStrictMode: true,
-  compiler: {
-    styledComponents: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  experimental: {
+    scrollRestoration: true,
+    // this includes files from the monorepo base one directory up
+    outputFileTracingRoot: path.join(__dirname, "../"),
   },
 };
 

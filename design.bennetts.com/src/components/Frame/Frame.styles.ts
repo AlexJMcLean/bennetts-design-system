@@ -15,6 +15,7 @@ export const HeaderStyles = styled.div`
 
   .logo {
     display: flex;
+    text-decoration: none;
   }
 `;
 
@@ -163,5 +164,15 @@ export const CloseNavButton = styled.button`
     svg {
       transform: scale(0.5);
     }
+  }
+`;
+
+export const PageContentStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  > * {
+    width: 100%;
   }
 `;

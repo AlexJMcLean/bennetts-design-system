@@ -5,12 +5,14 @@ import {
   NavAndContent,
   NavToggle,
   CloseNavButton,
+  PageContentStyles,
 } from "./Frame.styles";
 import logo from "@/assets/svgs/logo.svg";
-import navJSON from "@/data/nav.json";
-import { NavJson } from "../../../types";
+import navJSON from "../../../.cache/nav.json";
+import { NavJson } from "@/types";
 import NavigationItem from "./NavigationItem";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   children: React.ReactNode;
@@ -65,10 +67,10 @@ const Frame = ({ children }: Props) => {
         >
           <NavToggleIcon />
         </NavToggle>
-        <div className="logo">
+        <Link href="/" className="logo">
           <Image src={logo} alt="logo" width="60" />
           <p>Bennetts Design System</p>
-        </div>
+        </Link>
         <></>
       </HeaderStyles>
       <NavAndContent>
@@ -90,7 +92,7 @@ const Frame = ({ children }: Props) => {
             <CloseIcon />
           </CloseNavButton>
         </Nav>
-        {children}
+        <PageContentStyles>{children}</PageContentStyles>
       </NavAndContent>
     </>
   );

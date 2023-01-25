@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Providers>
         <GlobalStyle />
         <Frame>
-          <Component {...pageProps} />;
+          <Component {...pageProps} />
         </Frame>
       </Providers>
     </>
