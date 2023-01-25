@@ -9,7 +9,7 @@
     "lint": "next lint",
     "create-component": "generact --root src/components src/components/Template/Template.tsx",
     "get-props": "tsc ./scripts/get-props/src/get-props.ts --target esnext --module node16 --types \"react\" --outDir ./scripts/tmp && node ./scripts/tmp/scripts/get-props/src/get-props.js && rm -rf ./scripts/tmp",
-    "gen-assets": "node scripts/gen-assets.mjs"
+    "gen-assets": "node scripts/gen-cache-json.mjs"
   },
   "dependencies": {
     "@floating-ui/react-dom-interactions": "^0.13.3",
@@ -21,7 +21,8 @@
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.2",
     "framer-motion": "^8.4.3",
-    "globby": "^13.1.3",
+    "glob": "^8.1.0",
+    "globby": "^11.1.0",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "next": "13.1.2",

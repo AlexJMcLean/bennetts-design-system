@@ -1,16 +1,17 @@
-import { existsSync, mkdirSync, writeFileSync } from "fs";
-import set from "lodash.set";
-import matter from "gray-matter";
+import path from "path";
 import globby from "globby";
+import { existsSync, rmSync, mkdirSync, writeFileSync, readFileSync } from "fs";
+import matter from "gray-matter";
+import set from "lodash.set";
 
 const cacheDir = path.join(process.cwd(), ".cache");
 const siteJsonFile = `${cacheDir}/site.json`;
 const navJsonFile = `${cacheDir}/nav.json`;
 
-const genNavJson = (markdownFiles) => {
+const genNavJson = (mardownFiles) => {
   let nav = {};
 
-  markdownFiles.forEach((md) => {
+  mardownFiles.forEach((md) => {
     const {
       title,
       navTitle,
@@ -21,10 +22,11 @@ const genNavJson = (markdownFiles) => {
       hideChildren,
       color,
       url,
+      status,
     } = md.frontMatter;
     const { slug } = md;
 
-    const path = `children.${slug.replace(/\//g, ".children")}`;
+    const path = `children.${slug.replace(/\//g, ".children.")}`;
 
     set(nav, path, {
       title: navTitle || title,
@@ -35,6 +37,7 @@ const genNavJson = (markdownFiles) => {
       newSection,
       hideChildren,
       color: color ? color.replace(/\\/g, "") : undefined,
+      status,
     });
   });
 
@@ -61,19 +64,26 @@ const getMdContent = (filePath) => {
 
 const genCacheJson = () => {
   if (!existsSync(cacheDir)) mkdirSync(cacheDir, { recursive: true });
+
+  // We have to normalise the current working directory as Globby does not
+  // regognise the Windows backslash method of writing paths
+  const normalisedCwd = process.cwd().replace(/\\/g, "/");
+
   const pathGlob = [
-    path.join(process.cwd(), "content/*.md"),
-    path.join(process.cwd(), "content/**/*.md"),
+    path.posix.join(normalisedCwd, "content/*.md"),
+    path.posix.join(normalisedCwd, "content/**/*.md"),
   ];
 
   const mdFiles = globby.sync(pathGlob);
 
-  const markdownFiles = mdFiles
+  const mardownFiles = mdFiles
     .map((filePath) => getMdContent(filePath))
     .sort((a, b) => a.slug.localeCompare(b.slug));
 
-  genSiteJson(markdownFiles);
-  genNavJson(markdownFiles);
+  genSiteJson(mardownFiles);
+  genNavJson(mardownFiles);
+
+  console.log("✅ Generated .cache/nav.json and .cache/site.json");
 };
 
 genCacheJson();
