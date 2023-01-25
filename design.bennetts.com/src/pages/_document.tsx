@@ -4,7 +4,6 @@ import Document, {
   Head,
   Main,
   NextScript,
-  DocumentInitialProps,
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
