@@ -21,64 +21,6 @@ keywords:
   - link
   - click
   - submit
-examples:
-  - fileName: button-default.tsx
-    title: Default
-    description: Used most in the interface. Only use another style if a button requires more or less visual weight.
-  - fileName: button-outline.tsx
-    title: Outline
-    description: Use against shaded or colorful backgrounds. An outline button will maintain the appropriate visual weight and won’t clash with the background color.
-  - fileName: button-outline-monochrome.tsx
-    title: Outline monochrome
-    description: Use against shaded or colorful backgrounds where matching the current text colors is more appropriate than the current outline theme.
-  - fileName: button-plain.tsx
-    title: Plain
-    description: Use for less important or less commonly used actions since they’re less prominent. For example, plain buttons are used as actions in cards.
-  - fileName: button-plain-monochrome.tsx
-    title: Plain monochrome
-    description: Use for less important or less commonly used actions where matching the current text color is desired. For example in the InlineError component.
-  - fileName: button-plain-destructive.tsx
-    title: Plain destructive
-    description: Use for actions that will delete merchant data or be otherwise difficult to recover from. Since they’re less prominent, use for less important or less commonly used destructive actions. For example, plain buttons are used as actions in cards.
-  - fileName: button-primary.tsx
-    title: Primary
-    description: Use to highlight the most important actions in any experience. Don’t use more than one primary button in a section or screen to avoid overwhelming merchants.
-  - fileName: button-destructive.tsx
-    title: Destructive
-    description: Use when the action will delete merchant data or be otherwise difficult to recover from. Destructive buttons should trigger a confirmation dialog before the action is completed. Be thoughtful about using destructive buttons because they can feel stressful for merchants.
-  - fileName: button-slim.tsx
-    title: Slim
-    description: Use when a table or list has a set of actions on each item to avoid making items taller than they need to be. Don’t use slim buttons for primary actions.
-  - fileName: button-large.tsx
-    title: Large
-    description: Use for the main call to action in empty states or for calls to action shown with large illustrations.
-  - fileName: button-full-width.tsx
-    title: Full-width
-    description: Use for buttons placed in a narrow column (especially when stacking multiple buttons) or for creating a set of buttons of equal width. Full-width buttons should rarely exceed 320 px wide.
-  - fileName: button-text-aligned.tsx
-    title: Text-aligned
-    description: Use for plain or monochrome buttons that could have a long length and should be aligned when they potentially overflow onto the next line.
-  - fileName: button-pressed.tsx
-    title: Pressed
-    description: Buttons are sometimes used as a toggle for other parts of the user interface.
-  - fileName: button-plain-disclosure.tsx
-    title: Plain disclosure
-    description: Use to indicate that more content can be disclosed on click, like text in a collapsible.
-  - fileName: button-right-aligned-disclosure.tsx
-    title: Right-aligned disclosure
-    description: When working with `fullWidth + textAlign="left"`, the `disclosure` will align itself to the far right.
-  - fileName: button-select-disclosure.tsx
-    title: Select disclosure
-    description: Use to indicate that multiple options are available from this control, similar to a `<select />` HTML element.
-  - fileName: button-split.tsx
-    title: Split
-    description: Use when there is only one primary action but other related actions can be taken.
-  - fileName: button-disabled-state.tsx
-    title: Disabled state
-    description: Use for actions that aren’t currently available. The surrounding interface should make it clear why the button is disabled and what needs to be done to enable it.
-  - fileName: button-loading-state.tsx
-    title: Loading state
-    description: Use when a button has been pressed and the associated action is in progress.
 ---
 
 ## Best practices
@@ -146,31 +88,6 @@ To help support merchants who use speech activation software as well as sighted 
 
 When possible, give the button visible text that clearly conveys its purpose without the use of `accessibilityLabel`. When no additional content is needed, duplicating the button text with `accessibilityLabel` isn’t necessary.
 
-<!-- dodont -->
-
-#### Do
-
-```jsx
-<Button>Edit shipping address</Button>
-```
-
-```jsx
-<Heading>Shipping address</Heading>
-<Button accessibilityLabel="Edit shipping address">Edit</Button>
-```
-
-#### Don’t
-
-```jsx
-<Button accessibilityLabel="Change your shipping address">Edit</Button>
-```
-
-```jsx
-<Button accessibilityLabel="Edit">Edit</Button>
-```
-
-<!-- end -->
-
 #### External links
 
 When you use the button component to create a link to an external resource:
@@ -180,32 +97,6 @@ When you use the button component to create a link to an external resource:
 - Use the `accessibilityLabel` prop to include the warning about opening a new tab in the button text for non-visual screen reader users
 
 For more information on making accessible links, see the [link component](https://polaris.shopify.com/components/link).
-
-<!-- dodont -->
-
-#### Do
-
-```jsx
-<Button
-  accessibilityLabel="Terms and conditions (opens a new window)"
-  icon={ExternalMinor}
-  url="http://example.com"
-  external
->
-  Terms and conditions
-</Button>
-```
-
-#### Don’t
-
-```jsx
-<Button url="http://example.com" external>Terms and conditions</Button>
-<Button url="http://example.com" external>
-  Terms and conditions
-</Button>
-```
-
-<!-- end -->
 
 ### Keyboard support
 
