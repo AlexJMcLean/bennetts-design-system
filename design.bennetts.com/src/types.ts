@@ -64,3 +64,8 @@ export interface MarkdownData {
   description: string | undefined;
   readme: string;
 }
+
+export interface MarkdownFile {
+  frontMatter: any;
+  readme: string;
+}
