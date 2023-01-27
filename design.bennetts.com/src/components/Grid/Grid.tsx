@@ -15,7 +15,7 @@ function Grid({ children }: Props) {
   return <GridStyles>{children}</GridStyles>;
 }
 
-interface GridItemProps {
+export interface GridItemProps {
   title: string;
   description: string;
   url: string;
