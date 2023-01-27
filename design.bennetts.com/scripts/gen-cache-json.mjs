@@ -4,7 +4,11 @@ import { existsSync, rmSync, mkdirSync, writeFileSync, readFileSync } from "fs";
 import matter from "gray-matter";
 import set from "lodash.set";
 
-const cacheDir = path.join(process.cwd(), ".cache");
+// We have to normalise the current working directory as Globby does not
+// regognise the Windows backslash method of writing paths
+const normalisedCwd = process.cwd().replace(/\\/g, "/");
+
+const cacheDir = path.join(normalisedCwd, ".cache");
 const siteJsonFile = `${cacheDir}/site.json`;
 const navJsonFile = `${cacheDir}/nav.json`;
 
@@ -25,6 +29,7 @@ const genNavJson = (mardownFiles) => {
       status,
     } = md.frontMatter;
     const { slug } = md;
+    console.log(slug);
 
     const path = `children.${slug.replace(/\//g, ".children.")}`;
 
@@ -55,7 +60,7 @@ const getMdContent = (filePath) => {
   const fileContent = readFileSync(filePath, "utf-8");
   const { data } = matter(fileContent);
   const slug = filePath
-    .replace(`${process.cwd()}/content/`, "")
+    .replace(`${normalisedCwd}/content/`, "")
     .replace("/index.md", "")
     .replace(".md", "");
 
@@ -64,10 +69,6 @@ const getMdContent = (filePath) => {
 
 const genCacheJson = () => {
   if (!existsSync(cacheDir)) mkdirSync(cacheDir, { recursive: true });
-
-  // We have to normalise the current working directory as Globby does not
-  // regognise the Windows backslash method of writing paths
-  const normalisedCwd = process.cwd().replace(/\\/g, "/");
 
   const pathGlob = [
     path.posix.join(normalisedCwd, "content/*.md"),
