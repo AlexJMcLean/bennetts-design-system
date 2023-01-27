@@ -8,16 +8,10 @@ keywords:
   - principles
   - reusable
   - merchant solutions
-icon: RefreshMajor
+icon: cycle
 ---
 
-A design pattern is a repeatable solution to a common UX problem in a specific merchant situation. Using the right pattern in the right context makes the Shopify admin familiar and easy to use.
-
----
-
-### Join the conversation
-
-Do you have ideas or feedback on how we can make these guidelines more empowering and useful? Please share your thoughts in the [GitHub discussion](https://github.com/Shopify/polaris/discussions/6046).
+A design pattern is a repeatable solution to a common UX problem in a specific merchant situation.
 
 ---
 
@@ -27,7 +21,7 @@ For patterns to be successful, they need to be consistent, unified, and contextu
 
 ### Consistent
 
-Patterns are always used in the same way for the same reasons. Merchants need to be able to trust their expectations.
+Patterns are always used in the same way for the same reasons. Users need to be able to trust their expectations.
 
 ### Unified
 

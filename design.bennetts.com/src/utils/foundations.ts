@@ -35,7 +35,7 @@ export const getStaticPropsForFoundations = (category: string) => {
       .filter((path) => !path.endsWith(`content/${category}/index.md`))
       .forEach((markdownFilePath) => {
         const markdown = fs.readFileSync(markdownFilePath, "utf-8");
-        const { frontMatter, readme }: MarkdownFile = parseMarkdown;
+        const { frontMatter }: MarkdownFile = parseMarkdown(markdown);
         const {
           title,
           description,
