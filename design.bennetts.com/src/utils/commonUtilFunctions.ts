@@ -24,3 +24,7 @@ export const toPascalCase = (string: string): string => {
     .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
     .join("");
 };
+
+export const normaliseCwd = (): string => {
+  return process.cwd().replace(/\\/g, "/");
+};
