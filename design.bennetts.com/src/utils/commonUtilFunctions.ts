@@ -28,3 +28,6 @@ export const toPascalCase = (string: string): string => {
 export const normaliseCwd = (): string => {
   return process.cwd().replace(/\\/g, "/");
 };
+
+export const uppercaseFirst = (str: string): string =>
+  str.charAt(0).toUpperCase() + str.slice(1);
