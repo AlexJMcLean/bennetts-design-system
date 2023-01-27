@@ -1,4 +1,5 @@
 import yaml from "js-yaml";
+import { MarkdownData } from "../types";
 
 export const parseMarkdown = (inputMarkdown: string) => {
   const readmeSections = inputMarkdown.split("---");
@@ -20,7 +21,7 @@ export const parseMarkdown = (inputMarkdown: string) => {
 
   let markdown = readmeSection;
 
-  const out = { frontMatter, description, readme: markdown };
+  const out: MarkdownData = { frontMatter, description, readme: markdown };
 
   return out;
 };

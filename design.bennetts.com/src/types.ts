@@ -58,3 +58,9 @@ export type Type = {
   defaultVaue?: string;
   members?: Type[];
 };
+
+export interface MarkdownData {
+  frontMatter: any;
+  description: string | undefined;
+  readme: string;
+}
